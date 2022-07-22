@@ -1,7 +1,7 @@
 import { Field } from '@nestjs/graphql';
 import { ArgsType } from '@nestjs/graphql';
 import { AnswerCreateInput } from './answer-create.input';
-import { Type } from '@nestjs/class-transformer';
+import { Type } from 'class-transformer';
 
 @ArgsType()
 export class CreateOneAnswerArgs {

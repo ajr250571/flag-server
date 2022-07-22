@@ -1,7 +1,7 @@
 import { Field } from '@nestjs/graphql';
 import { InputType } from '@nestjs/graphql';
 import { QuestionUpdateWithoutAnswersInput } from './question-update-without-answers.input';
-import { Type } from '@nestjs/class-transformer';
+import { Type } from 'class-transformer';
 import { QuestionCreateWithoutAnswersInput } from './question-create-without-answers.input';
 
 @InputType()

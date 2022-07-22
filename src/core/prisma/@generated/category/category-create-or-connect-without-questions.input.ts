@@ -1,7 +1,7 @@
 import { Field } from '@nestjs/graphql';
 import { InputType } from '@nestjs/graphql';
 import { CategoryWhereUniqueInput } from './category-where-unique.input';
-import { Type } from '@nestjs/class-transformer';
+import { Type } from 'class-transformer';
 import { CategoryCreateWithoutQuestionsInput } from './category-create-without-questions.input';
 
 @InputType()

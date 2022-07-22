@@ -1,7 +1,7 @@
 import { Field } from '@nestjs/graphql';
 import { ArgsType } from '@nestjs/graphql';
 import { AnswerWhereUniqueInput } from './answer-where-unique.input';
-import { Type } from '@nestjs/class-transformer';
+import { Type } from 'class-transformer';
 import { AnswerCreateInput } from './answer-create.input';
 import { AnswerUpdateInput } from './answer-update.input';
 

@@ -1,7 +1,7 @@
 import { Field } from '@nestjs/graphql';
 import { InputType } from '@nestjs/graphql';
 import { QuestionCreateManyCategoryInput } from './question-create-many-category.input';
-import { Type } from '@nestjs/class-transformer';
+import { Type } from 'class-transformer';
 
 @InputType()
 export class QuestionCreateManyCategoryInputEnvelope {

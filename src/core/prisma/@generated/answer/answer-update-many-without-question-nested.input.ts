@@ -1,7 +1,7 @@
 import { Field } from '@nestjs/graphql';
 import { InputType } from '@nestjs/graphql';
 import { AnswerCreateWithoutQuestionInput } from './answer-create-without-question.input';
-import { Type } from '@nestjs/class-transformer';
+import { Type } from 'class-transformer';
 import { AnswerCreateOrConnectWithoutQuestionInput } from './answer-create-or-connect-without-question.input';
 import { AnswerUpsertWithWhereUniqueWithoutQuestionInput } from './answer-upsert-with-where-unique-without-question.input';
 import { AnswerCreateManyQuestionInputEnvelope } from './answer-create-many-question-input-envelope.input';

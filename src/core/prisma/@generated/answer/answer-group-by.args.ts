@@ -1,7 +1,7 @@
 import { Field } from '@nestjs/graphql';
 import { ArgsType } from '@nestjs/graphql';
 import { AnswerWhereInput } from './answer-where.input';
-import { Type } from '@nestjs/class-transformer';
+import { Type } from 'class-transformer';
 import { AnswerOrderByWithAggregationInput } from './answer-order-by-with-aggregation.input';
 import { AnswerScalarFieldEnum } from './answer-scalar-field.enum';
 import { AnswerScalarWhereWithAggregatesInput } from './answer-scalar-where-with-aggregates.input';

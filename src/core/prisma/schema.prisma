@@ -6,10 +6,11 @@ generator client {
 }
 
 generator nestgraphql {
-    provider = "node node_modules/prisma-nestjs-graphql"
-    // for yarn monorepos
-    // provider = "prisma-nestjs-graphql"
-    output = "../prisma/@generated"
+  provider                = "node node_modules/prisma-nestjs-graphql"
+  fields_Validator_from   = "@nestjs/class-validator"
+  fields_Transformer_from = "@nestjs/@nestjs/@nestjs/class-transformer"
+  fields_Validator_input  = true
+  output                  = "../prisma/@generated"
 }
 
 datasource db {
@@ -21,7 +22,9 @@ model Category {
   id        String     @id @default(cuid())
   createdAt DateTime   @default(now())
   updatedAt DateTime   @updatedAt
-  name      String
+  /// @Validator.MinLength(3)
+  /// @Validator.MaxLength(60)
+  name      String     @unique
   questions Question[]
 }
 

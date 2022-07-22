@@ -1,7 +1,7 @@
 import { Field } from '@nestjs/graphql';
 import { InputType } from '@nestjs/graphql';
 import { AnswerScalarWhereInput } from './answer-scalar-where.input';
-import { Type } from '@nestjs/class-transformer';
+import { Type } from 'class-transformer';
 import { AnswerUpdateManyMutationInput } from './answer-update-many-mutation.input';
 
 @InputType()

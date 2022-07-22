@@ -1,7 +1,7 @@
 import { Field } from '@nestjs/graphql';
 import { ArgsType } from '@nestjs/graphql';
 import { CategoryWhereInput } from './category-where.input';
-import { Type } from '@nestjs/class-transformer';
+import { Type } from 'class-transformer';
 import { CategoryOrderByWithAggregationInput } from './category-order-by-with-aggregation.input';
 import { CategoryScalarFieldEnum } from './category-scalar-field.enum';
 import { CategoryScalarWhereWithAggregatesInput } from './category-scalar-where-with-aggregates.input';

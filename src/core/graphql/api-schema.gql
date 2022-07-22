@@ -1,0 +1,140 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Answer {
+  id: ID!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  question: Question!
+  questionId: String!
+  content: String!
+  isCorrect: Boolean!
+  url: String!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type QuestionCount {
+  answers: Int!
+}
+
+type Question {
+  id: ID!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  content: String!
+  answers: [Answer!]
+  category: Category!
+  categoryId: String!
+  _count: QuestionCount!
+}
+
+type CategoryCount {
+  questions: Int!
+}
+
+type Category {
+  id: ID!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  name: String!
+  questions: [Question!]
+  _count: CategoryCount!
+}
+
+type Query {
+  categories: [Category!]!
+  category(id: String!): Category!
+}
+
+type Mutation {
+  createCategory(input: CategoryCreateInput!): Category!
+  deleteCategory(id: String!): Category!
+}
+
+input CategoryCreateInput {
+  id: String
+  createdAt: DateTime
+  updatedAt: DateTime
+  name: String!
+  questions: QuestionCreateNestedManyWithoutCategoryInput
+}
+
+input QuestionCreateNestedManyWithoutCategoryInput {
+  create: [QuestionCreateWithoutCategoryInput!]
+  connectOrCreate: [QuestionCreateOrConnectWithoutCategoryInput!]
+  createMany: QuestionCreateManyCategoryInputEnvelope
+  connect: [QuestionWhereUniqueInput!]
+}
+
+input QuestionCreateWithoutCategoryInput {
+  id: String
+  createdAt: DateTime
+  updatedAt: DateTime
+  content: String!
+  answers: AnswerCreateNestedManyWithoutQuestionInput
+}
+
+input AnswerCreateNestedManyWithoutQuestionInput {
+  create: [AnswerCreateWithoutQuestionInput!]
+  connectOrCreate: [AnswerCreateOrConnectWithoutQuestionInput!]
+  createMany: AnswerCreateManyQuestionInputEnvelope
+  connect: [AnswerWhereUniqueInput!]
+}
+
+input AnswerCreateWithoutQuestionInput {
+  id: String
+  createdAt: DateTime
+  updatedAt: DateTime
+  content: String!
+  isCorrect: Boolean
+  url: String!
+}
+
+input AnswerCreateOrConnectWithoutQuestionInput {
+  where: AnswerWhereUniqueInput!
+  create: AnswerCreateWithoutQuestionInput!
+}
+
+input AnswerWhereUniqueInput {
+  id: String
+}
+
+input AnswerCreateManyQuestionInputEnvelope {
+  data: [AnswerCreateManyQuestionInput!]!
+  skipDuplicates: Boolean
+}
+
+input AnswerCreateManyQuestionInput {
+  id: String
+  createdAt: DateTime
+  updatedAt: DateTime
+  content: String!
+  isCorrect: Boolean
+  url: String!
+}
+
+input QuestionCreateOrConnectWithoutCategoryInput {
+  where: QuestionWhereUniqueInput!
+  create: QuestionCreateWithoutCategoryInput!
+}
+
+input QuestionWhereUniqueInput {
+  id: String
+}
+
+input QuestionCreateManyCategoryInputEnvelope {
+  data: [QuestionCreateManyCategoryInput!]!
+  skipDuplicates: Boolean
+}
+
+input QuestionCreateManyCategoryInput {
+  id: String
+  createdAt: DateTime
+  updatedAt: DateTime
+  content: String!
+}
