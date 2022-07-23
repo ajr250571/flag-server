@@ -8,7 +8,7 @@ export class CategoryWhereUniqueInput {
   id?: string;
 
   @Field(() => String, { nullable: true })
-  @Validator.MinLength(3)
+  @Validator.MinLength(5)
   @Validator.MaxLength(60)
   name?: string;
 }

@@ -22,7 +22,7 @@ model Category {
   id        String     @id @default(cuid())
   createdAt DateTime   @default(now())
   updatedAt DateTime   @updatedAt
-  /// @Validator.MinLength(3)
+  /// @Validator.MinLength(5)
   /// @Validator.MaxLength(60)
   name      String     @unique
   questions Question[]

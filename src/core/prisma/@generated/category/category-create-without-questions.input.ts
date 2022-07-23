@@ -14,7 +14,7 @@ export class CategoryCreateWithoutQuestionsInput {
   updatedAt?: Date | string;
 
   @Field(() => String, { nullable: false })
-  @Validator.MinLength(3)
+  @Validator.MinLength(5)
   @Validator.MaxLength(60)
   name!: string;
 }
