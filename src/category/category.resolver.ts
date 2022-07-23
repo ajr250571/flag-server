@@ -37,4 +37,12 @@ export class CategoryResolver {
   ) {
     return await this.categoryService.delete(id);
   }
+
+  @Mutation(() => Category)
+  async updateCategory(
+    @Args({ name: 'data', type: () => CategoryCreateInput })
+    data: CategoryCreateInput,
+  ) {
+    return await this.categoryService.update(data);
+  }
 }

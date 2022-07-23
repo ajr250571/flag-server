@@ -8,7 +8,7 @@ generator client {
 generator nestgraphql {
   provider                = "node node_modules/prisma-nestjs-graphql"
   fields_Validator_from   = "@nestjs/class-validator"
-  fields_Transformer_from = "@nestjs/@nestjs/@nestjs/class-transformer"
+  fields_Transformer_from = "@nestjs/class-transformer"
   fields_Validator_input  = true
   output                  = "../prisma/@generated"
 }
